@@ -16,7 +16,7 @@ def test_update(player):
     print(r.text)
 
 def test_update_2(player):
-    payload = {'action': 'movement', 'vx':2, 'vy':0, 'player_name': player['name']}
+    payload = {'action': 'movement', 'vx':8, 'vy':0, 'player_name': player['name']}
     r = requests.post('http://localhost:5000/update_world', data=payload)
     print(r.text)
 
@@ -33,12 +33,21 @@ def get_world_state():
 
 player = add_player()
 player = json.loads(player)
+test_update(player)
+get_world_state()
+get_world_state()
+get_world_state()
+get_world_state()
 
 player_2 = add_player()
 player_2 = json.loads(player_2)
-
-test_update(player)
 test_update_2(player_2)
+
+test_update_3(player)
+get_world_state()
+get_world_state()
+get_world_state()
+get_world_state()
 get_world_state()
 get_world_state()
 get_world_state()
