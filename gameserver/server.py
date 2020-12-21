@@ -50,7 +50,7 @@ def game_thread():
 
 try:
     _thread.start_new_thread(game_thread, ())
-    app.run()
+    app.run(host="127.0.0.1", port=5000, threaded=True)
 except:
     print ("Error: unable to start thread")
 

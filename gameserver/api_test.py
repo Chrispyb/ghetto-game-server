@@ -39,3 +39,7 @@ player_2 = json.loads(player_2)
 
 test_update(player)
 test_update_2(player_2)
+get_world_state()
+get_world_state()
+get_world_state()
+get_world_state()
