@@ -14,10 +14,6 @@ class World:
             vx = float(action['vx'])
             vy = float(action['vy'])
 
-            diagonal = math.sqrt(vx*vx + vy*vy)
-            vx = vx/diagonal
-            vy = vy/diagonal
-
             player_name = action['player_name']
             self.players[player_name].update_velocity(vx,vy)
             

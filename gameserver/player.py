@@ -18,7 +18,8 @@ class Player:
 
     def update_velocity(self, vx, vy):
         scale = self.velocity_scale
-        self.body.velocity = (vx * scale, vy * scale)
+        
+        self.body.velocity = (vx, vy)
 
     def to_json(self):
         obj = {}
@@ -26,5 +27,6 @@ class Player:
         obj['name'] = self.name
         obj['position'] = {'x': self.body.position.x, 'y': self.body.position.y }
         obj['animation'] = self.animation.to_json()
+        obj['velocity'] = {'vx':self.body.velocity.x, 'vy': self.body.velocity.y}
     
         return obj
